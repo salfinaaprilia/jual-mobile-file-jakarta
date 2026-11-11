@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="title">Mobile File Zeco, Lemari Arsip Dorong | PT Cahaya Mustika Internesia</title>
+<meta name="description" data-i18n="desc" data-i18n-attr="content" content="PT Cahaya Mustika Internesia, distributor mobile file (lemari arsip dorong) merek Zeco untuk kantor, instansi, dan perusahaan.">
+<meta name="theme-color" content="#0f2350">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PT Cahaya Mustika Internesia">
+<meta name="twitter:card" content="summary">
+<meta property="og:locale" id="og-locale" content="id_ID">
+<meta property="og:title" data-i18n="title" data-i18n-attr="content" content="Mobile File Zeco, Lemari Arsip Dorong | PT Cahaya Mustika Internesia">
+<meta property="og:description" data-i18n="desc" data-i18n-attr="content" content="PT Cahaya Mustika Internesia, distributor mobile file (lemari arsip dorong) merek Zeco untuk kantor, instansi, dan perusahaan.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"PT Cahaya Mustika Internesia","description":"Distributor mobile file (lemari arsip dorong) merek Zeco","telephone":"+62 811-330-1819","email":"contact@cahayamustikainternesia.com","address":{"@type":"PostalAddress","streetAddress":"Jl. Penjernihan II No.7, RT.11/RW.6, Bend. Hilir","addressLocality":"Jakarta Pusat","addressRegion":"DKI Jakarta","postalCode":"10210","addressCountry":"ID"},"openingHours":"Mo-Fr 08:00-16:00"}</script>
+<link rel="icon" href="images/logo%20CMI.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap"></noscript>
+<link rel="preload" as="image" href="images/background-mobile.webp" media="(max-width:900px)" fetchpriority="high">
+<link rel="preload" as="image" href="images/background.webp" media="(min-width:901px)" fetchpriority="high">
+<script src="script.js?v=wa24" defer></script>
+<link rel="stylesheet" href="style.css?v=206">
+<style>
+/* Hero beranda: judul tetap putih (tanpa kuning). Lapisan navy pekat di kiri (tempat teks) dan memudar ke kanan agar foto tetap terlihat jernih */
+body[data-page=beranda] .hero{position:relative}
+html body[data-page=beranda] .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:
+  linear-gradient(180deg,rgba(9,20,48,.55) 0%,rgba(9,20,48,0) 22%,rgba(9,20,48,0) 70%,rgba(9,20,48,.6) 100%),
+  linear-gradient(90deg,rgba(9,22,54,.93) 0%,rgba(11,28,68,.86) 32%,rgba(14,36,86,.55) 55%,rgba(14,36,86,.12) 78%,rgba(14,36,86,0) 100%)}
+body[data-page=beranda] .hero .hero-in{position:relative;z-index:2;grid-template-columns:minmax(0,780px) 1fr}
+
+/* Judul dan paragraf */
+body[data-page=beranda] .hero h1{margin:0;max-width:none;font:700 clamp(30px,3.2vw,46px)/1.12 Manrope,sans-serif;letter-spacing:-.025em;color:#fff;text-shadow:0 2px 24px rgba(6,14,36,.35)}
+body[data-page=beranda] .hero h1 span{color:#fff}
+body[data-page=beranda] .hero h1 .gold{display:block;color:rgba(255,255,255,.9)}
+body[data-page=beranda] .hero .lead{max-width:48ch;margin-top:22px;font:400 clamp(15px,1.15vw,17px)/1.75 Poppins,sans-serif;color:rgba(255,255,255,.8);text-shadow:none}
+
+/* Tombol */
+body[data-page=beranda] .hero .btns{margin-top:34px;gap:14px}
+body[data-page=beranda] .hero .btn{padding:14px 28px;border-radius:999px;font-weight:600;font-size:15px;transition:background .2s,border-color .2s,color .2s,box-shadow .2s,transform .2s}
+body[data-page=beranda] .hero .btn:not(.line){box-shadow:0 14px 30px -12px rgba(8,20,52,.7)}
+body[data-page=beranda] .hero .btn:not(.line):hover{transform:translateY(-1px)}
+body[data-page=beranda] .hero .btn.line{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.45);color:#fff;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+body[data-page=beranda] .hero .btn.line:hover{background:rgba(255,255,255,.14);border-color:#fff}
+
+/* Baris keunggulan singkat di bawah tombol */
+body[data-page=beranda] .hero .hero-facts{display:flex;flex-wrap:wrap;gap:12px 26px;margin:44px 0 0;padding:22px 0 0;list-style:none;border-top:1px solid rgba(255,255,255,.16);max-width:760px}
+body[data-page=beranda] .hero .hero-facts li{display:flex;align-items:center;gap:10px;font:500 13.5px/1.4 Poppins,sans-serif;color:rgba(255,255,255,.86);white-space:nowrap}
+body[data-page=beranda] .hero .hero-facts li::before{content:"";width:6px;height:6px;border-radius:50%;background:#dcc27c;box-shadow:0 0 0 4px rgba(220,194,124,.18);flex:none}
+
+@media (max-width:900px){
+  html body[data-page=beranda] .hero::after{background:linear-gradient(180deg,rgba(9,22,54,.72) 0%,rgba(11,28,68,.82) 55%,rgba(9,20,48,.92) 100%)}
+  body[data-page=beranda] .hero .hero-in{grid-template-columns:minmax(0,1fr)}
+  body[data-page=beranda] .hero .hero-facts{margin-top:32px;gap:10px 22px}
+}
+@media (max-width:520px){
+  body[data-page=beranda] .hero h1 .gold{display:inline}
+  body[data-page=beranda] .hero .btns{flex-direction:column;align-items:stretch}
+  body[data-page=beranda] .hero .btn{justify-content:center;text-align:center}
+  body[data-page=beranda] .hero .hero-facts{flex-direction:column;padding-top:18px}
+  body[data-page=beranda] .hero .hero-facts li{font-size:13.5px}
+}
+</style>
+<style>
+/* Bagian Masalah -> Solusi: judul di kiri, timeline bernomor di kanan (lingkaran nomor dihubungkan garis vertikal). Isi dibuat script.js dari PROBLEMS */
+.pm{--pm-navy:#12306b;--pm-blue:#1d4fd8;--pm-mute:#5b6577;--pm-line:#d6e2f5;position:relative;padding:104px 0;background:#fff}
+.pm::before{content:"";position:absolute;left:0;right:0;top:0;height:140px;background:linear-gradient(180deg,#eef3fb,rgba(255,255,255,0));pointer-events:none}
+.pm>.w{position:relative}
+.pm-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:80px;align-items:start}
+.pm-side{display:block;position:sticky;top:112px}
+.pm .pm-kick{margin:0 0 18px;font:700 12.5px/1 Poppins,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--pm-blue)}
+.pm .pm-title{margin:0 0 24px;font:800 clamp(2rem,3.4vw,2.9rem)/1.14 Manrope,sans-serif;letter-spacing:-.02em;color:var(--pm-navy);text-wrap:balance}
+.pm .pm-lead{margin:0;max-width:44ch;font:400 1.05rem/1.8 Poppins,sans-serif;color:var(--pm-mute)}
+
+/* Timeline */
+.pm .pm-list#prob{display:block;width:100%;min-width:0;padding:0;background:none;border:0;border-radius:0;box-shadow:none}
+.pm .pm-item{position:relative;display:grid;grid-template-columns:68px minmax(0,1fr);gap:28px;align-items:start;margin:0;padding:0 0 48px;background:none;border:0;border-radius:0;box-shadow:none}
+.pm .pm-item:last-child{padding-bottom:0}
+.pm .pm-item::before{content:"";position:absolute;left:33px;top:68px;bottom:0;width:2px;background:var(--pm-line)}
+.pm .pm-item:last-child::before{display:none}
+.js .pm .pm-item.rv{transition:opacity .4s ease,transform .4s cubic-bezier(.2,.7,.2,1)}
+.pm .pm-no{display:grid;place-items:center;width:68px;height:68px;border-radius:50%;background:#fff;border:2px solid var(--pm-blue);font:800 1.1rem/1 Manrope,sans-serif;font-variant-numeric:tabular-nums;color:var(--pm-blue);transition:background .25s,color .25s,box-shadow .25s}
+.pm .pm-item:hover .pm-no{background:var(--pm-blue);color:#fff;box-shadow:0 10px 24px -10px rgba(29,79,216,.6)}
+.pm .pm-body{min-width:0;padding-top:8px}
+.pm .pm-item h3{margin:0 0 10px;font:800 1.3rem/1.35 Manrope,sans-serif;letter-spacing:-.01em;color:var(--pm-navy)}
+.pm .pm-item p{display:block;margin:0;max-width:52ch;font:400 1rem/1.75 Poppins,sans-serif;color:var(--pm-mute)}
+
+@media (max-width:900px){.pm{padding:64px 0}.pm-in{grid-template-columns:minmax(0,1fr);gap:44px}.pm-side{position:static}}
+@media (max-width:520px){[data-page=beranda] .hero h1 .gold{display:inline}.pm .pm-item{grid-template-columns:48px minmax(0,1fr);gap:16px;padding-bottom:36px}.pm .pm-item::before{left:23px;top:48px}.pm .pm-no{width:48px;height:48px;font-size:.95rem}.pm .pm-body{padding-top:2px}.pm .pm-item h3{font-size:1.12rem;margin-bottom:6px}.pm .pm-item p{font-size:.94rem}}
+
+/* Pilihan mobile file: dua kartu (Manual dan Mekanik) berdampingan, foto di atas, teks di bawah */
+.sec-lead .grid#types{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:none;margin:0;align-items:stretch}
+.sec-lead #types .card{display:flex;flex-direction:column;width:100%;max-width:none;margin:0;min-width:0}
+.sec-lead #types .card .pic{position:relative!important;flex:0 0 auto!important;flex-basis:auto!important;width:100%!important;min-width:100%!important;max-width:100%!important;height:auto!important;min-height:0!important;aspect-ratio:4/3!important;overflow:hidden;float:none!important;margin:0!important;grid-column:auto!important}
+.sec-lead #types .card .pic img.foto{position:absolute!important;inset:0!important;display:block;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover;object-position:center var(--y,center);transform:scale(var(--zoom,1));transform-origin:center}
+.sec-lead #types .card .bd{flex:1;display:flex;flex-direction:column;padding:24px 26px 28px}
+.sec-lead #types .card .bd h2{font-size:1.35rem}
+.sec-lead #types .card .bd .go{margin-top:auto;align-self:flex-start}
+.sec-lead #types .card .bd .ex{margin-bottom:20px}
+@media (max-width:760px){.sec-lead .grid#types{grid-template-columns:minmax(0,1fr)}}
+/* Kartu perbandingan Manual vs Mekanik: kalimat singkat, tiga poin bercentang, tombol jelas */
+html body[data-page=beranda] .sec-lead #types .card.tcard{overflow:hidden;border:1px solid #e3eaf6;border-radius:20px;background:#fff;box-shadow:0 24px 48px -36px rgba(15,35,80,.45);transition:border-color .3s,box-shadow .3s,transform .3s}
+html body[data-page=beranda] .sec-lead #types .card.tcard:hover{border-color:#c9d8f3;box-shadow:0 32px 60px -34px rgba(15,35,80,.55);transform:translateY(-3px)}
+html body[data-page=beranda] .sec-lead #types .card.tcard .pic{background:#f4f7fc}
+html body[data-page=beranda] .sec-lead #types .card.tcard .pic img.foto{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+html body[data-page=beranda] .sec-lead #types .card.tcard:hover .pic img.foto{transform:scale(1.04)}
+html body[data-page=beranda] .sec-lead #types .card.tcard .pic .tag{position:absolute;top:18px;left:18px;z-index:2;padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font:600 11.5px/1 Poppins,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#12306b;box-shadow:0 6px 16px -8px rgba(15,35,80,.4)}
+html body[data-page=beranda] .sec-lead #types .card.tcard .bd{padding:28px 32px 32px}
+html body[data-page=beranda] .sec-lead #types .card.tcard .bd h2{margin:0;color:#12306b}
+html body[data-page=beranda] .sec-lead #types .card.tcard .bd .ex{margin:8px 0 0;min-height:3.4em;color:#5b6577}
+html body[data-page=beranda] .sec-lead #types .card.tcard .tc-list{list-style:none;margin:22px 0 28px;padding:20px 0 0;border-top:1px solid #edf1f8;display:grid;gap:12px}
+html body[data-page=beranda] .sec-lead #types .card.tcard .tc-list li{position:relative;padding-left:30px;font:500 .92rem/1.5 Poppins,sans-serif;color:#2b3445}
+html body[data-page=beranda] .sec-lead #types .card.tcard .tc-list li::before{content:"";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:#e8effc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.2l2.6 2.6L14 7.4' fill='none' stroke='%231d4fd8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat}
+html body[data-page=beranda] .sec-lead #types .card.tcard .bd .go{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border:1.5px solid #1d4fd8;border-radius:999px;background:transparent;font:600 .9rem/1 Poppins,sans-serif;color:#1d4fd8;transition:background .25s,color .25s}
+html body[data-page=beranda] .sec-lead #types .card.tcard:hover .bd .go{background:#1d4fd8;color:#fff}
+@media (max-width:760px){html body[data-page=beranda] .sec-lead #types .card.tcard .bd .ex{min-height:0}}
+@media (max-width:520px){html body[data-page=beranda] .sec-lead #types .card.tcard .bd{padding:22px 22px 24px}html body[data-page=beranda] .sec-lead #types .card.tcard .bd .go{align-self:stretch;justify-content:center}}
+@media (prefers-reduced-motion:reduce){html body[data-page=beranda] .sec-lead #types .card.tcard,html body[data-page=beranda] .sec-lead #types .card.tcard .pic img.foto{transition:none}html body[data-page=beranda] .sec-lead #types .card.tcard:hover,html body[data-page=beranda] .sec-lead #types .card.tcard:hover .pic img.foto{transform:none}}
+</style>
+<style>
+/* Bagian "berbagai kebutuhan": empat kartu foto (bento 2x2). Baris 1: lebar + sempit, baris 2: sempit + lebar. Teks di atas gradasi gelap di bawah foto */
+body[data-page=beranda] #sect{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-auto-rows:clamp(300px,30vw,420px);gap:24px;align-items:stretch}
+body[data-page=beranda] #sect .card.static{position:relative;display:block;min-width:0;margin:0;padding:0;border:0;border-radius:20px;overflow:hidden;isolation:isolate;background:#12306b;box-shadow:0 24px 48px -32px rgba(15,35,80,.55);transition:box-shadow .35s ease,transform .35s ease}
+body[data-page=beranda] #sect .card.static:nth-child(1),body[data-page=beranda] #sect .card.static:nth-child(4){grid-column:span 3}
+body[data-page=beranda] #sect .card.static:nth-child(2),body[data-page=beranda] #sect .card.static:nth-child(3){grid-column:span 2}
+body[data-page=beranda] #sect .card.static:hover{box-shadow:0 32px 60px -30px rgba(15,35,80,.7);transform:translateY(-3px)}
+body[data-page=beranda] #sect .card.static .pj{position:absolute;inset:0;display:block;height:auto}
+body[data-page=beranda] #sect .card.static .pj .pjp{position:absolute;inset:0;width:auto;height:auto;aspect-ratio:auto;margin:0;border-radius:0}
+body[data-page=beranda] #sect .card.static .pjp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+body[data-page=beranda] #sect .card.static:hover .pjp img{transform:scale(1.05)}
+body[data-page=beranda] #sect .card.static::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(10,26,61,0) 35%,rgba(10,26,61,.55) 62%,rgba(10,26,61,.92) 100%)}
+body[data-page=beranda] #sect .card.static .pj .bd{position:absolute;left:0;right:0;bottom:0;z-index:2;display:block;margin:0;padding:0 34px 32px;background:none;border:0;border-radius:0;box-shadow:none}
+body[data-page=beranda] #sect .card.static .pj .bd h2{margin:0;font:600 clamp(1.12rem,1.35vw,1.35rem)/1.3 Manrope,sans-serif;letter-spacing:-.005em;color:#fff}
+body[data-page=beranda] #sect .card.static .pj .bd h2::before{content:"";display:block;width:28px;height:2px;border-radius:2px;background:#dcc27c;margin-bottom:12px;transition:width .35s ease}
+body[data-page=beranda] #sect .card.static:hover .pj .bd h2::before{width:48px}
+body[data-page=beranda] #sect .card.static .pj .bd .ex{margin:8px 0 0;max-width:42ch;font:400 .88rem/1.65 Poppins,sans-serif;letter-spacing:.005em;color:rgba(255,255,255,.78)}
+
+@media(max-width:900px){
+  body[data-page=beranda] #sect{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:300px;gap:16px}
+  body[data-page=beranda] #sect .card.static:nth-child(n){grid-column:span 1}
+  body[data-page=beranda] #sect .card.static .pj .bd{padding:0 22px 22px}
+}
+@media(max-width:600px){
+  body[data-page=beranda] #sect{grid-template-columns:minmax(0,1fr);grid-auto-rows:260px;gap:14px}
+  body[data-page=beranda] #sect .card.static{border-radius:16px}
+  body[data-page=beranda] #sect .card.static .pj .bd h2{font-size:1.1rem}
+  body[data-page=beranda] #sect .card.static .pj .bd .ex{font-size:.85rem}
+}
+@media(prefers-reduced-motion:reduce){body[data-page=beranda] #sect .card.static,body[data-page=beranda] #sect .card.static .pjp img{transition:none}body[data-page=beranda] #sect .card.static:hover,body[data-page=beranda] #sect .card.static:hover .pjp img{transform:none}}
+</style>
+<style>
+/* Skala huruf beranda: satu ukuran untuk judul bagian, satu untuk judul kartu/poin, satu untuk teks isi. Mengikuti gaya kartu sektor (Manrope 600 untuk judul kecil, Poppins ringan untuk isi) */
+html body[data-page=beranda]{--fs-h2:clamp(1.75rem,2.4vw,2.25rem);--fs-intro:1rem;--fs-h3:clamp(1.06rem,1.35vw,1.2rem);--fs-body:.92rem}
+/* Judul bagian */
+html body[data-page=beranda] .sec-h h2,html body[data-page=beranda] .pm .pm-title,html body[data-page=beranda] .cta h2{font:700 var(--fs-h2)/1.2 Manrope,sans-serif;letter-spacing:-.02em;text-wrap:balance}
+/* Paragraf pembuka bagian */
+html body[data-page=beranda] .sec-h p,html body[data-page=beranda] .pm .pm-lead,html body[data-page=beranda] .cta p{font:400 var(--fs-intro)/1.75 Poppins,sans-serif}
+/* Judul kartu / poin */
+html body[data-page=beranda] .pm .pm-item h3,html body[data-page=beranda] #sect .card.static .pj .bd h2,html body[data-page=beranda] .sec-lead #types .card .bd h2,html body[data-page=beranda] .sec-dark #adv h2,html body[data-page=beranda] #faq button{font-family:Manrope,sans-serif;font-weight:600;font-size:var(--fs-h3);line-height:1.35;letter-spacing:-.005em}
+html body[data-page=beranda] #faq button{font-size:1rem}
+/* Teks isi kartu / poin */
+html body[data-page=beranda] .pm .pm-item p,html body[data-page=beranda] .sec-lead #types .card .bd .ex,html body[data-page=beranda] .sec-dark #adv p,html body[data-page=beranda] #faq .ans p{font:400 var(--fs-body)/1.7 Poppins,sans-serif}
+html body[data-page=beranda] #sect .card.static .pj .bd .ex{font-size:.88rem}
+@media (max-width:520px){
+  html body[data-page=beranda] .pm .pm-item h3,html body[data-page=beranda] #sect .card.static .pj .bd h2,html body[data-page=beranda] .sec-lead #types .card .bd h2,html body[data-page=beranda] .sec-dark #adv h2{font-size:1.06rem}
+  html body[data-page=beranda] .pm .pm-item p,html body[data-page=beranda] .sec-lead #types .card .bd .ex,html body[data-page=beranda] .sec-dark #adv p,html body[data-page=beranda] #faq .ans p{font-size:.9rem}
+}
+</style>
+<style>
+/* Mengapa memilih: empat kartu kaca di atas latar navy, ikon dalam kotak bergradasi, nomor tipis di kanan atas, garis emas muncul saat disorot */
+html body[data-page=beranda] .why-sec{position:relative;overflow:hidden;isolation:isolate}
+html body[data-page=beranda] .why-sec::before{content:"";position:absolute;z-index:-1;inset:auto -10% -40% auto;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(83,128,224,.28),rgba(83,128,224,0) 65%);pointer-events:none}
+html body[data-page=beranda] .why-sec::after{content:"";position:absolute;z-index:-1;inset:-30% auto auto -12%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(220,194,124,.12),rgba(220,194,124,0) 65%);pointer-events:none}
+html body[data-page=beranda] .why-sec .why{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:8px}
+html body[data-page=beranda] .why-sec .why-card{position:relative;display:flex;flex-direction:column;min-width:0;padding:28px 26px 30px;border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.12);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);overflow:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s,background .35s}
+html body[data-page=beranda] .why-sec .why-card::before{content:"";position:absolute;left:26px;right:26px;top:0;height:2px;border-radius:0 0 2px 2px;background:linear-gradient(90deg,#dcc27c,rgba(220,194,124,0));transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+html body[data-page=beranda] .why-sec .why-card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.24);background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.04))}
+html body[data-page=beranda] .why-sec .why-card:hover::before{transform:scaleX(1)}
+html body[data-page=beranda] .why-sec .why-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:36px}
+html body[data-page=beranda] .why-sec .why-ic{display:block;width:52px;height:52px;border-radius:14px;background:no-repeat center/24px,linear-gradient(140deg,#3d6fe0,#1d3f9e);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 12px 24px -12px rgba(29,79,216,.8)}
+html body[data-page=beranda] .why-sec .why-card:nth-child(1) .why-ic{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3l9 5-9 5-9-5 9-5z'/%3E%3Cpath d='M3 12l9 5 9-5'/%3E%3Cpath d='M3 16l9 5 9-5'/%3E%3C/svg%3E"),linear-gradient(140deg,#3d6fe0,#1d3f9e)}
+html body[data-page=beranda] .why-sec .why-card:nth-child(2) .why-ic{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5'/%3E%3C/svg%3E"),linear-gradient(140deg,#3d6fe0,#1d3f9e)}
+html body[data-page=beranda] .why-sec .why-card:nth-child(3) .why-ic{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z'/%3E%3Cpath d='M14 3v5h5'/%3E%3Cpath d='M9 14l2 2 4-4'/%3E%3C/svg%3E"),linear-gradient(140deg,#3d6fe0,#1d3f9e)}
+html body[data-page=beranda] .why-sec .why-card:nth-child(4) .why-ic{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 14v-2a8 8 0 0 1 16 0v2'/%3E%3Crect x='3' y='14' width='4' height='6' rx='1.5'/%3E%3Crect x='17' y='14' width='4' height='6' rx='1.5'/%3E%3Cpath d='M19 20c0 1.5-2 2-5 2h-3'/%3E%3C/svg%3E"),linear-gradient(140deg,#3d6fe0,#1d3f9e)}
+html body[data-page=beranda] .why-sec .why-no{font:600 .8rem/1 Manrope,sans-serif;letter-spacing:.14em;font-variant-numeric:tabular-nums;color:rgba(255,255,255,.38);padding-top:4px}
+html body[data-page=beranda] .why-sec .why-card h3{margin:0 0 10px;font:600 var(--fs-h3,1.2rem)/1.35 Manrope,sans-serif;letter-spacing:-.005em;color:#fff}
+html body[data-page=beranda] .why-sec .why-card p{margin:0;font:400 var(--fs-body,.92rem)/1.7 Poppins,sans-serif;color:rgba(227,236,255,.78)}
+@media (max-width:1024px){html body[data-page=beranda] .why-sec .why{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){html body[data-page=beranda] .why-sec .why{grid-template-columns:minmax(0,1fr);gap:14px}html body[data-page=beranda] .why-sec .why-card{padding:22px 22px 24px}html body[data-page=beranda] .why-sec .why-top{margin-bottom:22px}html body[data-page=beranda] .why-sec .why-ic{width:46px;height:46px;border-radius:12px}}
+@media (prefers-reduced-motion:reduce){html body[data-page=beranda] .why-sec .why-card,html body[data-page=beranda] .why-sec .why-card::before{transition:none}html body[data-page=beranda] .why-sec .why-card:hover{transform:none}}
+</style>
+<style>
+/* Kartu sektor jadi tautan ke portofolio */
+html body[data-page=beranda] #sect .card.static{text-decoration:none;color:inherit;cursor:pointer}
+html body[data-page=beranda] #sect .card.static:focus-visible{outline:3px solid #dcc27c;outline-offset:3px}
+html body[data-page=beranda] #sect .card.static .pj-go{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font:600 .82rem/1 Poppins,sans-serif;letter-spacing:.02em;color:#dcc27c;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+html body[data-page=beranda] #sect .card.static:hover .pj-go,html body[data-page=beranda] #sect .card.static:focus-visible .pj-go{opacity:1;transform:none}
+@media (hover:none),(max-width:900px){html body[data-page=beranda] #sect .card.static .pj-go{opacity:1;transform:none}}
+
+</style>
+<style>
+/* Artikel terbaru (di atas FAQ). Isi dari WordPress bila CFG.wp diisi di script.js, selain itu dari daftar artikel lokal */
+html body[data-page=beranda] .ha-sec{background:#fff}
+html body[data-page=beranda] .ha-sec .ha-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:40px}
+html body[data-page=beranda] .ha-sec .ha-k{margin:0 0 14px;font:700 12.5px/1 Poppins,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#1d4fd8}
+html body[data-page=beranda] .ha-sec .ha-head h2{margin:0;font:700 var(--fs-h2,2.2rem)/1.2 Manrope,sans-serif;letter-spacing:-.02em;color:#12306b}
+html body[data-page=beranda] .ha-sec .ha-head p{margin:12px 0 0;max-width:52ch;font:400 var(--fs-intro,1rem)/1.75 Poppins,sans-serif;color:#5b6577}
+html body[data-page=beranda] .ha-sec .ha-all{flex:none;display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border:1.5px solid #1d4fd8;border-radius:999px;font:600 .9rem/1 Poppins,sans-serif;color:#1d4fd8;text-decoration:none;transition:background .25s,color .25s}
+html body[data-page=beranda] .ha-sec .ha-all:hover{background:#1d4fd8;color:#fff}
+html body[data-page=beranda] .ha-sec .ha-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+html body[data-page=beranda] .ha-sec .ha-card{display:flex;flex-direction:column;min-width:0;overflow:hidden;border:1px solid #e3eaf6;border-radius:20px;background:#fff;color:inherit;text-decoration:none;box-shadow:0 24px 48px -38px rgba(15,35,80,.45);transition:transform .3s,box-shadow .3s,border-color .3s}
+html body[data-page=beranda] .ha-sec .ha-card:hover{transform:translateY(-3px);border-color:#c9d8f3;box-shadow:0 32px 60px -34px rgba(15,35,80,.55)}
+html body[data-page=beranda] .ha-sec .ha-card:focus-visible{outline:3px solid #1d4fd8;outline-offset:3px}
+html body[data-page=beranda] .ha-sec .ha-img{position:relative;aspect-ratio:16/10;overflow:hidden;background:linear-gradient(135deg,#e8effc,#f4f7fc)}
+html body[data-page=beranda] .ha-sec .ha-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+html body[data-page=beranda] .ha-sec .ha-card:hover .ha-img img{transform:scale(1.05)}
+html body[data-page=beranda] .ha-sec .ha-kat{position:absolute;top:16px;left:16px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font:600 11px/1 Poppins,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#12306b}
+html body[data-page=beranda] .ha-sec .ha-bd{flex:1;display:flex;flex-direction:column;padding:24px 26px 26px}
+html body[data-page=beranda] .ha-sec .ha-date{font:500 .8rem/1 Poppins,sans-serif;color:#8a93a3}
+html body[data-page=beranda] .ha-sec .ha-bd h3{margin:12px 0 10px;font:600 var(--fs-h3,1.2rem)/1.4 Manrope,sans-serif;letter-spacing:-.005em;color:#12306b;transition:color .2s}
+html body[data-page=beranda] .ha-sec .ha-card:hover h3{color:#1d4fd8}
+html body[data-page=beranda] .ha-sec .ha-bd p{margin:0 0 20px;font:400 var(--fs-body,.92rem)/1.7 Poppins,sans-serif;color:#5b6577;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+html body[data-page=beranda] .ha-sec .ha-read{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font:600 .88rem/1 Poppins,sans-serif;color:#1d4fd8}
+html body[data-page=beranda] .ha-sec .ha-read i{font-style:normal;transition:transform .25s}
+html body[data-page=beranda] .ha-sec .ha-card:hover .ha-read i{transform:translateX(4px)}
+@media (max-width:1024px){html body[data-page=beranda] .ha-sec .ha-grid{grid-template-columns:repeat(2,minmax(0,1fr))}html body[data-page=beranda] .ha-sec .ha-grid .ha-card:nth-child(n+3){display:none}}
+@media (max-width:640px){
+  html body[data-page=beranda] .ha-sec .ha-head{flex-direction:column;align-items:flex-start;margin-bottom:28px}
+  html body[data-page=beranda] .ha-sec .ha-grid{grid-template-columns:minmax(0,1fr);gap:16px}
+  html body[data-page=beranda] .ha-sec .ha-grid .ha-card:nth-child(n+3){display:flex}
+  html body[data-page=beranda] .ha-sec .ha-all{order:2}
+}
+@media (prefers-reduced-motion:reduce){html body[data-page=beranda] .ha-sec .ha-card,html body[data-page=beranda] .ha-sec .ha-img img{transition:none}html body[data-page=beranda] .ha-sec .ha-card:hover,html body[data-page=beranda] .ha-sec .ha-card:hover .ha-img img{transform:none}}
+</style>
+</head>
+<body data-page="beranda">
+<a class="skip" href="#main" data-i18n="skip">Langsung ke konten</a>
+
+<header class="hd">
+  <div class="w hd-in">
+    <a class="logo" href="index.html" aria-label="PT Cahaya Mustika Internesia, ke beranda" data-i18n="logo-aria" data-i18n-attr="aria-label"><img class="logo-img" src="images/logoooo.webp" alt="PT Cahaya Mustika Internesia" onerror="this.style.display='none'"></a>
+    <button class="burger" id="burger" aria-label="Buka menu" data-i18n="burger" data-i18n-attr="aria-label" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+    <nav class="menu" id="menu" aria-label="Menu utama" data-i18n="menu-aria" data-i18n-attr="aria-label">
+      <a href="index.html" data-nav="beranda" data-i18n="nav-beranda">Beranda</a>
+      <a href="produk.html" data-nav="produk" data-i18n="nav-produk">Produk</a>
+      <a href="portofolio.html" data-nav="portofolio" data-i18n="nav-portofolio">Portofolio</a>
+      <a href="artikel.html" data-nav="artikel" data-i18n="nav-artikel">Artikel</a>
+      <a href="kontak.html" data-nav="kontak" data-i18n="nav-kontak">Kontak Kami</a>
+      <div class="lang" role="group" aria-label="Bahasa / Language"><button type="button" data-lang="id" lang="id" aria-label="Bahasa Indonesia" title="Bahasa Indonesia" aria-pressed="true">ID</button><button type="button" data-lang="en" lang="en" aria-label="English" title="English" aria-pressed="false">EN</button></div>
+      <a class="btn gold sm" id="hd-wa" href="#" target="_blank" rel="noopener" data-i18n="consult">Konsultasi Sekarang</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <noscript><p class="nojs">Aktifkan JavaScript untuk melihat katalog. Hubungi kami di WhatsApp +62 811-330-1819.<br>Please enable JavaScript to view the catalog. Contact us on WhatsApp +62 811-330-1819.</p></noscript>
+
+  <section id="beranda" class="hero">
+    <div class="w hero-in">
+      <div>
+        <div class="crumb" data-i18n="hero-eyebrow">Solusi penyimpanan dokumen modern</div>
+        <h1><span data-i18n="h1a">Jual Mobile File Zeco untuk</span> <span class="gold" data-i18n="h1b">Kantor, Instansi, dan Perusahaan</span></h1>
+        <p class="lead" id="hero-lead">PT Cahaya Mustika Internesia menyediakan lemari arsip dorong dengan penggerak manual dan mekanik yang menyimpan lebih banyak dokumen di ruang yang sama.</p>
+        <div class="btns">
+          <a class="btn" href="produk.html" data-i18n="hero-b1">Lihat Produk Zeco</a>
+          <a class="btn line" href="portofolio.html" data-i18n="hero-b2">Portofolio Kami</a>
+        </div>
+        <ul class="hero-facts">
+          <li data-i18n="hero-f1">Hemat ruang hingga 50%</li>
+          <li data-i18n="hero-f2">Penggerak manual &amp; mekanik</li>
+          <li data-i18n="hero-f3">Survei &amp; instalasi oleh tim kami</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="pm" aria-labelledby="pm-title">
+    <div class="w pm-in">
+      <div class="pm-side">
+          <div class="pm-kick" data-i18n="prob-k">Masalah yang sering terjadi</div>
+          <h2 class="pm-title" id="pm-title" data-i18n="prob-h">Arsip Menumpuk, Ruangan Jadi Penuh?</h2>
+        <p class="pm-lead" data-i18n="prob-p">Jumlah arsip terus bertambah, sementara ruangan tidak ikut membesar. Inilah masalah yang paling sering dihadapi kantor saat menyimpan arsip.</p>
+      </div>
+      <div class="pm-list" id="prob"></div>
+    </div>
+  </section>
+
+  <section class="sec sec-dark why-sec">
+    <div class="w">
+      <div class="sec-h"><div><h2 data-i18n="adv-h">Mengapa memilih mobile file Zeco?</h2><p data-i18n="adv-p">Kami tidak hanya menyediakan mobile file, tetapi juga mendampingi Anda dari konsultasi hingga pemasangan.</p></div></div>
+      <div class="why" id="why"></div>
+    </div>
+  </section>
+
+  <section class="sec sec-lead">
+    <div class="w">
+      <div class="sec-h"><div><h2 data-i18n="typ-h">Pilihan mobile file Zeco</h2><p data-i18n="typ-p">Dua tipe untuk kebutuhan penyimpanan Anda: mobile file manual dan mobile file mekanik.</p></div></div>
+      <div class="grid" id="types"></div>
+    </div>
+  </section>
+
+  <section class="sec alt">
+    <div class="w">
+      <div class="sec-h"><div><h2 data-i18n="ind-h">Mobile file Zeco untuk berbagai kebutuhan</h2><p data-i18n="ind-p">Solusi penyimpanan arsip yang dapat disesuaikan dengan karakter setiap sektor.</p></div></div>
+      <div class="grid" id="sect"></div>
+    </div>
+  </section>
+
+
+  <section class="sec ha-sec" aria-labelledby="ha-title">
+    <div class="w">
+      <div class="ha-head">
+        <div>
+          <div class="ha-k" data-i18n="ha-k">Artikel</div>
+          <h2 id="ha-title" data-i18n="ha-h">Artikel terbaru</h2>
+          <p data-i18n="ha-p">Panduan dan tips seputar penyimpanan arsip dan mobile file.</p>
+        </div>
+        <a class="ha-all" href="artikel.html"><span data-i18n="ha-all">Lihat semua artikel</span> <i aria-hidden="true">&rarr;</i></a>
+      </div>
+      <div class="ha-grid" id="home-art"></div>
+    </div>
+  </section>
+
+  <section id="faq" class="sec alt sec-split">
+    <div class="w">
+      <div class="sec-h"><div><h2 data-i18n="faq-h">Pertanyaan yang sering diajukan</h2><p data-i18n="faq-p">Jawaban singkat seputar mobile file Zeco.</p></div></div>
+      <div class="faq" id="faq-list"></div>
+    </div>
+  </section>
+
+  <section class="cta cta-new">
+    <div class="w">
+      <div class="cta-box">
+        <div class="cta-txt">
+          <h2 data-i18n="cta-h">Siap merapikan arsip dan menghemat ruangan Anda?</h2>
+          <p data-i18n="cta-p">Konsultasikan kebutuhan Anda. Kami bantu memilih model Zeco yang paling sesuai.</p>
+        </div>
+        <div class="cta-act">
+          <a class="btn gold cta-main" id="cta-wa" href="#" target="_blank" rel="noopener" data-i18n="consult">Konsultasi Sekarang</a>
+          <a class="cta-tel" href="tel:+628113301819">+62 811-330-1819</a>
+          <p class="cta-hours" data-i18n="cta-hours">Senin–Jumat, 08.00–16.00 WIB</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ft">
+  <div class="w ft-in">
+    <div class="ft-about">
+      <a class="logo inv" href="index.html" aria-label="PT Cahaya Mustika Internesia"><img class="logo-img ft-logo" src="images/logo%20CMI.webp" loading="lazy" alt="PT Cahaya Mustika Internesia" onerror="this.style.display='none'"></a>
+      <p data-i18n="ft-about">PT Cahaya Mustika Internesia, distributor mobile file merek Zeco untuk kantor, instansi, dan perusahaan.</p>
+    </div>
+    <div>
+      <h2 data-i18n="ft-pages">Informasi Perusahaan</h2>
+      <a href="index.html" data-i18n="nav-beranda">Beranda</a><a href="produk.html" data-i18n="nav-produk">Produk</a><a href="portofolio.html" data-i18n="nav-portofolio">Portofolio</a><a href="artikel.html" data-i18n="nav-artikel">Artikel</a><a href="kontak.html" data-i18n="nav-kontak">Kontak Kami</a>
+    </div>
+    <div id="ft-kontak"></div>
+  </div>
+  <div class="w ft-bot"><span data-i18n="ft-bot">© 2026 PT Cahaya Mustika Internesia. Spesifikasi dan ketersediaan dapat berubah.</span><a class="top" href="#main" data-i18n="top">Kembali ke atas ↑</a></div>
+</footer>
+
+<!-- Jendela detail produk / artikel -->
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <button class="dl-x" id="dlg-x" aria-label="Tutup" data-i18n="close" data-i18n-attr="aria-label">×</button>
+  <div class="dl" id="dlg-body"></div>
+</dialog>
+
+<!-- Nomor telepon footer -> WhatsApp -->
+<script>
+(function () {
+  var box = document.getElementById('ft-kontak');
+  if (!box) return;
+
+  var WA = 'https://wa.me/628113301819?text=MFJ-MYID%0A%0AHalo%20Cahaya%20Mustika%20Internesia%2C%20saya%20tertarik%20dengan%20produk%20Mobile%20File.';
+
+  function patch() {
+    box.querySelectorAll('a').forEach(function (a) {
+      var href = a.getAttribute('href') || '';
+      var isPhone = /^tel:/i.test(href) || /811[-\s]?330[-\s]?1819/.test(a.textContent);
+      if (!isPhone || a.dataset.wa) return;
+      a.href = WA;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.dataset.wa = '1';
+      a.setAttribute('aria-label', 'Chat WhatsApp');
+    });
+  }
+
+  patch();
+  new MutationObserver(patch).observe(box, { childList: true, subtree: true });
+})();
+</script>
+</body>
+</html>

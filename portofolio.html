@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="title-port">Portofolio | PT Cahaya Mustika Internesia</title>
+<meta name="description" data-i18n="desc-port" data-i18n-attr="content" content="Contoh proyek penataan arsip dengan mobile file Zeco di rumah sakit, kantor notaris, instansi, dan perusahaan.">
+<meta name="theme-color" content="#0f2350">
+<meta property="og:type" content="website">
+<meta property="og:locale" id="og-locale" content="id_ID">
+<meta property="og:title" data-i18n="title-port" data-i18n-attr="content" content="Portofolio | PT Cahaya Mustika Internesia">
+<meta property="og:description" data-i18n="desc-port" data-i18n-attr="content" content="Contoh proyek penataan arsip dengan mobile file Zeco di rumah sakit, kantor notaris, instansi, dan perusahaan.">
+<link rel="icon" href="images/logo%20CMI.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Poppins:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Poppins:wght@400;500;600&display=swap"></noscript>
+<script src="script.js?v=wa24" defer></script>
+<link rel="stylesheet" href="style.css?v=206">
+<style>
+.kc{--n:#12306b;--b:#1d4fd8;--g:#dcc27c;--m:#5b6577;--l:#e8eef8}
+.pf{padding:64px 0 96px;background:#fff}
+.pf-h{text-align:center;margin-bottom:28px}
+main.kc .pf-h h1{margin:0;font:700 clamp(1.9rem,3vw,2.6rem)/1.15 Manrope,sans-serif;color:var(--n);letter-spacing:-.02em}
+.pf-h p{margin:12px auto 0;max-width:52ch;font:400 1rem/1.7 Poppins,sans-serif;color:var(--m)}
+
+/* Filter sektor */
+.pf-f{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0 0 36px}
+.pf-f button{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border:1px solid #dbe4f3;border-radius:999px;background:#fff;font:500 .9rem/1 Poppins,sans-serif;color:#2b3a55;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.pf-f button:hover{border-color:#b9cbec}
+.pf-f button[aria-pressed="true"]{background:var(--n);border-color:var(--n);color:#fff}
+.pf-f button i{font-style:normal;font-size:.78rem;opacity:.6}
+
+/* Galeri masonry: foto tampil utuh sesuai bentuk aslinya */
+.pf-g{display:flex;align-items:flex-start;gap:22px}
+.pf-col{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:22px}
+.ph{position:relative;margin:0}
+.ph[hidden]{display:none}
+.ph-b{position:relative;display:block;border-radius:18px;overflow:hidden;background:var(--l);cursor:zoom-in;box-shadow:0 20px 40px -30px rgba(15,35,80,.55);outline:none;transition:box-shadow .3s,transform .3s}
+.ph-b:hover{transform:translateY(-3px);box-shadow:0 28px 54px -30px rgba(15,35,80,.65)}
+.ph-b:focus-visible{outline:3px solid var(--b);outline-offset:3px}
+.ph-i{display:block;position:relative}
+.ph-i img{display:block;width:100%;height:auto;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.ph-b:hover .ph-i img{transform:scale(1.04)}
+.ph-k{position:absolute;left:14px;top:14px;z-index:2;display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:var(--n);font:600 .72rem/1 Poppins,sans-serif;letter-spacing:.02em}
+.ph-k:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--g)}
+.ph-t{position:absolute;left:0;right:0;bottom:0;z-index:1;display:block;padding:64px 20px 18px;background:linear-gradient(180deg,rgba(10,26,61,0),rgba(10,26,61,.9));opacity:0;transform:translateY(8px);transition:opacity .3s,transform .3s}
+.ph-b:hover .ph-t,.ph-b:focus-visible .ph-t{opacity:1;transform:none}
+.ph-c{display:block;padding-right:44px;font:600 1rem/1.4 Manrope,sans-serif;color:#fff}
+.ph-d{display:none}
+.ph-t::after{content:"\2922";position:absolute;right:18px;bottom:16px;width:32px;height:32px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.18);color:#fff;font:600 .95rem/1 Poppins,sans-serif}
+@media (hover:none),(max-width:760px){.ph-t{opacity:1;transform:none}}
+@media (max-width:520px){.pf{padding:32px 0 56px}.pf-g,.pf-col{gap:14px}.pf-f{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;margin-left:-16px;margin-right:-16px;padding:0 16px 4px;scrollbar-width:none}.pf-f::-webkit-scrollbar{display:none}.pf-f button{flex:none}}
+
+/* Lightbox */
+.lb{position:fixed;inset:0;z-index:1000;display:grid;grid-template-rows:minmax(0,1fr) auto;background:rgba(6,14,34,.94);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
+.lb[hidden]{display:none}
+.lb.on{opacity:1;visibility:visible}
+.lb-stage{position:relative;display:flex;align-items:center;justify-content:center;min-height:0;padding:72px 96px 12px}
+.lb-img{width:auto;height:auto;max-width:min(100%,1400px);max-height:calc(100vh - 230px);max-height:calc(100dvh - 230px);border-radius:12px;box-shadow:0 30px 80px -20px rgba(0,0,0,.7);object-fit:contain}
+.lb-cap{max-width:760px;margin:0 auto;padding:14px 24px 30px;text-align:center;color:#fff}
+.lb-k{display:inline-block;margin-bottom:8px;padding:5px 11px;border-radius:999px;background:rgba(220,194,124,.18);color:#e9d39a;font:600 .72rem/1 Poppins,sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.lb-c{margin:0;font:600 1.15rem/1.4 Manrope,sans-serif}
+.lb-d{margin:6px 0 0;font:400 .92rem/1.65 Poppins,sans-serif;color:rgba(227,236,255,.75)}
+.lb-n{margin-top:10px;font:500 .78rem/1 Poppins,sans-serif;color:rgba(227,236,255,.5)}
+.lb button{position:absolute;display:grid;place-items:center;width:52px;height:52px;border:1px solid rgba(255,255,255,.2);border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font:400 1.4rem/1 Poppins,sans-serif;cursor:pointer;transition:background .2s}
+.lb button:hover{background:rgba(255,255,255,.18)}
+.lb button:focus-visible{outline:3px solid var(--g);outline-offset:2px}
+.lb-x{top:18px;right:18px}
+.lb-p{left:24px;top:calc(50% - 60px)}
+.lb-q{right:24px;top:calc(50% - 60px)}
+@media (max-width:640px){.lb-img{max-width:100%;max-height:calc(100dvh - 260px)}.lb-stage{padding:72px 12px 8px}.lb-p,.lb-q{top:auto;bottom:24px;width:44px;height:44px}.lb-p{left:16px}.lb-q{right:16px}.lb-cap{padding:12px 72px 24px}}
+@media (prefers-reduced-motion:reduce){.ph-b,.ph-i img,.ph-t,.lb{transition:none}.ph-b:hover{transform:none}.ph-b:hover .ph-i img{transform:none}}
+</style>
+</head>
+<body data-page="portofolio">
+<a class="skip" href="#main" data-i18n="skip">Langsung ke konten</a>
+
+<header class="hd">
+  <div class="w hd-in">
+    <a class="logo" href="index.html" aria-label="PT Cahaya Mustika Internesia, ke beranda" data-i18n="logo-aria" data-i18n-attr="aria-label"><img class="logo-img" alt="PT Cahaya Mustika Internesia" onerror="this.style.display='none'"></a>
+    <button class="burger" id="burger" aria-label="Buka menu" data-i18n="burger" data-i18n-attr="aria-label" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+    <nav class="menu" id="menu" aria-label="Menu utama" data-i18n="menu-aria" data-i18n-attr="aria-label">
+      <a href="index.html" data-nav="beranda" data-i18n="nav-beranda">Beranda</a>
+      <a href="produk.html" data-nav="produk" data-i18n="nav-produk">Produk</a>
+      <a href="portofolio.html" data-nav="portofolio" data-i18n="nav-portofolio">Portofolio</a>
+      <a href="artikel.html" data-nav="artikel" data-i18n="nav-artikel">Artikel</a>
+      <a href="kontak.html" data-nav="kontak" data-i18n="nav-kontak">Kontak Kami</a>
+      <div class="lang" role="group" aria-label="Bahasa / Language"><button type="button" data-lang="id" lang="id" aria-label="Bahasa Indonesia" title="Bahasa Indonesia" aria-pressed="true">ID</button><button type="button" data-lang="en" lang="en" aria-label="English" title="English" aria-pressed="false">EN</button></div>
+      <a class="btn gold sm" id="hd-wa" href="#" target="_blank" rel="noopener" data-i18n="consult">Konsultasi Sekarang</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="kc">
+  <noscript><p class="nojs">Aktifkan JavaScript untuk melihat katalog. Hubungi kami di WhatsApp +62 811-330-1819.<br>Please enable JavaScript to view the catalog. Contact us on WhatsApp +62 811-330-1819.</p></noscript>
+  <section class="pf">
+    <div class="w">
+      <div class="pf-h">
+        <div>
+          <h1 data-id="Portofolio Proyek Kami" data-en="Our Project Portfolio">Portofolio Proyek Kami</h1>
+          <p data-id="Foto pemasangan mobile file Zeco di kantor, perusahaan, dan sekolah." data-en="Photos of Zeco mobile file installations in offices, companies, and schools.">Foto pemasangan mobile file Zeco di kantor, perusahaan, dan sekolah.</p>
+        </div>
+      </div>
+      <div class="pf-f" id="pf-f" role="group" aria-label="Filter sektor">
+        <button type="button" data-pf="all" aria-pressed="true"><span data-id="Semua" data-en="All">Semua</span> <i></i></button>
+        <button type="button" data-pf="kantor" aria-pressed="false"><span data-id="Perkantoran" data-en="Offices">Perkantoran</span> <i></i></button>
+        <button type="button" data-pf="sekolah" aria-pressed="false"><span data-id="Sekolah" data-en="Schools">Sekolah</span> <i></i></button>
+        <button type="button" data-pf="industri" aria-pressed="false"><span data-id="Perusahaan dan Industri" data-en="Companies and Industry">Perusahaan dan Industri</span> <i></i></button>
+        <button type="button" data-pf="kirim" aria-pressed="false"><span data-id="Pengiriman" data-en="Delivery">Pengiriman</span> <i></i></button>
+      </div>
+      <div class="pf-g" id="pf-g">
+<figure class="ph ft" data-s="kantor"><div class="ph-b"><span class="ph-i"><img src="images/kantor-3.webp" width="1200" height="900" alt="Instalasi Mobile File Manual di Ruang Arsip Kantor" data-alt-id="Instalasi Mobile File Manual di Ruang Arsip Kantor" data-alt-en="Manual Mobile File Installation in an Office Archive Room" fetchpriority="high" decoding="async"><span class="ph-k" data-id="Perkantoran" data-en="Offices">Perkantoran</span></span><span class="ph-t"><span class="ph-c" data-id="Instalasi Mobile File Manual di Ruang Arsip Kantor" data-en="Manual Mobile File Installation in an Office Archive Room">Instalasi Mobile File Manual di Ruang Arsip Kantor</span><span class="ph-d" data-id="Empat unit berdiri rapat di atas rel dan alas lantai. Lorong hanya dibuka saat dokumen dibutuhkan, sehingga ruangan tetap lega." data-en="Four units stand tight on rails and a floor panel. An aisle opens only when a document is needed, so the room stays spacious.">Empat unit berdiri rapat di atas rel dan alas lantai. Lorong hanya dibuka saat dokumen dibutuhkan, sehingga ruangan tetap lega.</span></span></div></figure>
+<figure class="ph" data-s="kantor"><div class="ph-b"><span class="ph-i"><img src="images/kantor-1.webp" width="780" height="1040" alt="Instalasi Mobile File di Kantor, Lengkap dengan Alas Lantai" data-alt-id="Instalasi Mobile File di Kantor, Lengkap dengan Alas Lantai" data-alt-en="Mobile File Installation in an Office, Complete with Floor Panel" fetchpriority="high" decoding="async"><span class="ph-k" data-id="Perkantoran" data-en="Offices">Perkantoran</span></span><span class="ph-t"><span class="ph-c" data-id="Instalasi Mobile File di Kantor, Lengkap dengan Alas Lantai" data-en="Mobile File Installation in an Office, Complete with Floor Panel">Instalasi Mobile File di Kantor, Lengkap dengan Alas Lantai</span><span class="ph-d" data-id="Nomor dan label di tiap unit membantu petugas menemukan dokumen dengan cepat. Alas lantai berkarpet menjaga area rel tetap rapi." data-en="Numbers and labels on each unit help staff find documents fast. A carpeted floor panel keeps the rail area tidy.">Nomor dan label di tiap unit membantu petugas menemukan dokumen dengan cepat. Alas lantai berkarpet menjaga area rel tetap rapi.</span></span></div></figure>
+<figure class="ph" data-s="industri"><div class="ph-b"><span class="ph-i"><img src="images/industri-2.webp" width="1200" height="712" alt="Instalasi Mobile File Mekanik di Gudang Arsip Perusahaan" data-alt-id="Instalasi Mobile File Mekanik di Gudang Arsip Perusahaan" data-alt-en="Mechanical Mobile File Installation in a Company Archive Warehouse" loading="lazy" decoding="async"><span class="ph-k" data-id="Perusahaan dan Industri" data-en="Company and Industry">Perusahaan dan Industri</span></span><span class="ph-t"><span class="ph-c" data-id="Instalasi Mobile File Mekanik di Gudang Arsip Perusahaan" data-en="Mechanical Mobile File Installation in a Company Archive Warehouse">Instalasi Mobile File Mekanik di Gudang Arsip Perusahaan</span><span class="ph-d" data-id="Roda putar menggeser unit dengan tenaga ringan, jadi arsip dalam jumlah besar tetap mudah dijangkau. Ruang sempit terpakai penuh." data-en="Hand wheels move each unit with light effort, so large archives stay within reach. Tight rooms get used in full.">Roda putar menggeser unit dengan tenaga ringan, jadi arsip dalam jumlah besar tetap mudah dijangkau. Ruang sempit terpakai penuh.</span></span></div></figure>
+<figure class="ph" data-s="kirim"><div class="ph-b"><span class="ph-i"><img class="zoom" src="images/pengiriman.webp" width="416" height="739" alt="Pengiriman Unit Mobile File ke Lokasi Proyek" data-alt-id="Pengiriman Unit Mobile File ke Lokasi Proyek" data-alt-en="Delivering Mobile File Units to the Project Site" loading="lazy" decoding="async"><span class="ph-k" data-id="Pengiriman" data-en="Delivery">Pengiriman</span></span><span class="ph-t"><span class="ph-c" data-id="Pengiriman Unit Mobile File ke Lokasi Proyek" data-en="Delivering Mobile File Units to the Project Site">Pengiriman Unit Mobile File ke Lokasi Proyek</span><span class="ph-d" data-id="Rel dan unit kami bungkus dengan plastik dan dus berlapis, supaya aman selama perjalanan sampai ke lokasi Anda." data-en="We wrap rails and units in plastic and layered cartons to keep them safe all the way to your site.">Rel dan unit kami bungkus dengan plastik dan dus berlapis, supaya aman selama perjalanan sampai ke lokasi Anda.</span></span></div></figure>
+<figure class="ph" data-s="kantor"><div class="ph-b"><span class="ph-i"><img src="images/kantor-2.webp" width="780" height="1040" alt="Uji Geser Mobile File Setelah Instalasi di Kantor" data-alt-id="Uji Geser Mobile File Setelah Instalasi di Kantor" data-alt-en="Slide Test of a Mobile File After Office Installation" loading="lazy" decoding="async"><span class="ph-k" data-id="Perkantoran" data-en="Offices">Perkantoran</span></span><span class="ph-t"><span class="ph-c" data-id="Uji Geser Mobile File Setelah Instalasi di Kantor" data-en="Slide Test of a Mobile File After Office Installation">Uji Geser Mobile File Setelah Instalasi di Kantor</span><span class="ph-d" data-id="Unit digeser hingga satu lorong terbuka dan rak di dalamnya terlihat. Rak masih kosong, siap diisi map dan boks arsip." data-en="Units slide apart to open one aisle and reveal the shelves inside. The shelves are still empty, ready for folders and archive boxes.">Unit digeser hingga satu lorong terbuka dan rak di dalamnya terlihat. Rak masih kosong, siap diisi map dan boks arsip.</span></span></div></figure>
+<figure class="ph" data-s="sekolah"><div class="ph-b"><span class="ph-i"><img src="images/sekolah-1.webp" width="1200" height="903" alt="Instalasi Mobile File di Ruang Kantor Sekolah" data-alt-id="Instalasi Mobile File di Ruang Kantor Sekolah" data-alt-en="Mobile File Installation in a School Office" loading="lazy" decoding="async"><span class="ph-k" data-id="Sekolah" data-en="Schools">Sekolah</span></span><span class="ph-t"><span class="ph-c" data-id="Instalasi Mobile File di Ruang Kantor Sekolah" data-en="Mobile File Installation in a School Office">Instalasi Mobile File di Ruang Kantor Sekolah</span><span class="ph-d" data-id="Unit mobile file terpasang di sisi ruangan, bersebelahan dengan meja rapat dan deretan piala sekolah." data-en="The mobile file stands along one side of the room, next to the meeting tables and the school's trophies.">Unit mobile file terpasang di sisi ruangan, bersebelahan dengan meja rapat dan deretan piala sekolah.</span></span></div></figure>
+<figure class="ph" data-s="industri"><div class="ph-b"><span class="ph-i"><img src="images/industri-1.webp" width="1200" height="677" alt="Dua Blok Mobile File Mekanik di Ruang Arsip Perusahaan" data-alt-id="Dua Blok Mobile File Mekanik di Ruang Arsip Perusahaan" data-alt-en="Two Blocks of Mechanical Mobile Files in a Company Archive Room" loading="lazy" decoding="async"><span class="ph-k" data-id="Perusahaan dan Industri" data-en="Company and Industry">Perusahaan dan Industri</span></span><span class="ph-t"><span class="ph-c" data-id="Dua Blok Mobile File Mekanik di Ruang Arsip Perusahaan" data-en="Two Blocks of Mechanical Mobile Files in a Company Archive Room">Dua Blok Mobile File Mekanik di Ruang Arsip Perusahaan</span><span class="ph-d" data-id="Dua blok unit berdiri di satu ruangan, masing-masing dengan rel dan alas lantai sendiri." data-en="Two blocks of units stand in one room, each with its own rails and floor panel.">Dua blok unit berdiri di satu ruangan, masing-masing dengan rel dan alas lantai sendiri.</span></span></div></figure>
+<figure class="ph" data-s="sekolah"><div class="ph-b"><span class="ph-i"><img src="images/sekolah-2.webp" width="1200" height="903" alt="Mobile File di Ruang Arsip Sekolah, Tampak Samping" data-alt-id="Mobile File di Ruang Arsip Sekolah, Tampak Samping" data-alt-en="Mobile File in a School Archive Room, Side View" loading="lazy" decoding="async"><span class="ph-k" data-id="Sekolah" data-en="Schools">Sekolah</span></span><span class="ph-t"><span class="ph-c" data-id="Mobile File di Ruang Arsip Sekolah, Tampak Samping" data-en="Mobile File in a School Archive Room, Side View">Mobile File di Ruang Arsip Sekolah, Tampak Samping</span><span class="ph-d" data-id="Unit berjajar memanjang di sisi dinding. Tiap pintu punya nomor dan label, jadi dokumen mudah dicari." data-en="Units line up along the wall. Each door has a number and label, so documents are easy to find.">Unit berjajar memanjang di sisi dinding. Tiap pintu punya nomor dan label, jadi dokumen mudah dicari.</span></span></div></figure>
+<figure class="ph" data-s="kantor"><div class="ph-b"><span class="ph-i"><img src="images/kantor-4.webp" width="676" height="1200" alt="Mobile File Terpasang di Ruang Arsip Kantor" data-alt-id="Mobile File Terpasang di Ruang Arsip Kantor" data-alt-en="Mobile File Installed in an Office Archive Room" loading="lazy" decoding="async"><span class="ph-k" data-id="Perkantoran" data-en="Offices">Perkantoran</span></span><span class="ph-t"><span class="ph-c" data-id="Mobile File Terpasang di Ruang Arsip Kantor" data-en="Mobile File Installed in an Office Archive Room">Mobile File Terpasang di Ruang Arsip Kantor</span><span class="ph-d" data-id="Unit mobile file berdiri di atas rel dengan alas lantai berkarpet, di ruangan yang bersih dan lega." data-en="Mobile file units stand on rails with a carpeted floor panel in a clean, spacious room.">Unit mobile file berdiri di atas rel dengan alas lantai berkarpet, di ruangan yang bersih dan lega.</span></span></div></figure>
+<figure class="ph" data-s="sekolah"><div class="ph-b"><span class="ph-i"><img src="images/sekolah-3.webp" width="903" height="1200" alt="Deretan Mobile File di Sepanjang Dinding Ruang Arsip Sekolah" data-alt-id="Deretan Mobile File di Sepanjang Dinding Ruang Arsip Sekolah" data-alt-en="A Row of Mobile Files Along a School Archive Room Wall" loading="lazy" decoding="async"><span class="ph-k" data-id="Sekolah" data-en="Schools">Sekolah</span></span><span class="ph-t"><span class="ph-c" data-id="Deretan Mobile File di Sepanjang Dinding Ruang Arsip Sekolah" data-en="A Row of Mobile Files Along a School Archive Room Wall">Deretan Mobile File di Sepanjang Dinding Ruang Arsip Sekolah</span><span class="ph-d" data-id="Pintu bernomor memanfaatkan seluruh sisi dinding, jadi arsip yang tersimpan banyak tanpa makan banyak lantai." data-en="Numbered doors use the full wall, so a large archive fits without taking much floor space.">Pintu bernomor memanfaatkan seluruh sisi dinding, jadi arsip yang tersimpan banyak tanpa makan banyak lantai.</span></span></div></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta cta-new">
+    <div class="w">
+      <div class="cta-box">
+        <div class="cta-txt">
+          <h2 data-i18n="cta-h">Siap merapikan arsip dan menghemat ruangan Anda?</h2>
+          <p data-i18n="cta-p">Konsultasikan kebutuhan Anda. Kami bantu memilih model Zeco yang paling sesuai.</p>
+        </div>
+        <div class="cta-act">
+          <a class="btn gold cta-main" id="cta-wa" href="#" target="_blank" rel="noopener" data-i18n="consult">Konsultasi Sekarang</a>
+          <a class="cta-tel" href="tel:+628113301819">+62 811-330-1819</a>
+          <p class="cta-hours" data-i18n="cta-hours">Senin–Jumat, 08.00–16.00 WIB</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto proyek" hidden>
+    <div class="lb-stage"><img class="lb-img" id="lb-img" alt=""></div>
+    <div class="lb-cap"><span class="lb-k" id="lb-k"></span><p class="lb-c" id="lb-c"></p><p class="lb-d" id="lb-d"></p><div class="lb-n" id="lb-n"></div></div>
+    <button type="button" class="lb-x" id="lb-x" aria-label="Tutup">&times;</button>
+    <button type="button" class="lb-p" id="lb-p" aria-label="Foto sebelumnya">&larr;</button>
+    <button type="button" class="lb-q" id="lb-q" aria-label="Foto berikutnya">&rarr;</button>
+  </div>
+
+</main>
+
+<footer class="ft">
+  <div class="w ft-in">
+    <div class="ft-about">
+      <a class="logo inv" href="index.html" aria-label="PT Cahaya Mustika Internesia"><img class="logo-img ft-logo" alt="PT Cahaya Mustika Internesia" onerror="this.style.display='none'"></a>
+      <p data-i18n="ft-about">PT Cahaya Mustika Internesia, distributor mobile file merek Zeco untuk kantor, instansi, dan perusahaan.</p>
+    </div>
+    <div>
+      <h2 data-i18n="ft-pages">Informasi Perusahaan</h2>
+      <a href="index.html" data-i18n="nav-beranda">Beranda</a><a href="produk.html" data-i18n="nav-produk">Produk</a><a href="portofolio.html" data-i18n="nav-portofolio">Portofolio</a><a href="artikel.html" data-i18n="nav-artikel">Artikel</a><a href="kontak.html" data-i18n="nav-kontak">Kontak Kami</a>
+    </div>
+    <div id="ft-kontak"></div>
+  </div>
+  <div class="w ft-bot"><span data-i18n="ft-bot">© 2026 PT Cahaya Mustika Internesia. Spesifikasi dan ketersediaan dapat berubah.</span><a class="top" href="#main" data-i18n="top">Kembali ke atas ↑</a></div>
+</footer>
+
+<!-- Jendela detail produk / artikel -->
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <button class="dl-x" id="dlg-x" aria-label="Tutup" data-i18n="close" data-i18n-attr="aria-label">×</button>
+  <div class="dl" id="dlg-body"></div>
+</dialog>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  function cur() { var on = document.querySelector('.lang [aria-pressed="true"]'); return on ? on.getAttribute('data-lang') : 'id'; }
+  function apply() {
+    var en = cur() === 'en';
+    document.querySelectorAll('[data-id][data-en]').forEach(function (el) { el.textContent = el.getAttribute(en ? 'data-en' : 'data-id'); });
+    document.querySelectorAll('img[data-alt-id]').forEach(function (im) { im.alt = im.getAttribute(en ? 'data-alt-en' : 'data-alt-id'); });
+  }
+  document.querySelectorAll('.lang button').forEach(function (b) {
+    b.addEventListener('click', function () { setTimeout(apply, 0); });
+    new MutationObserver(apply).observe(b, { attributes: true, attributeFilter: ['aria-pressed'] });
+  });
+  document.querySelectorAll('.ph img').forEach(function (im) {
+    im.addEventListener('error', function () { im.style.visibility = 'hidden'; });
+    im.addEventListener('load', function () { im.style.visibility = ''; });
+  });
+  apply();
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var grid = document.getElementById('pf-g'); if (!grid) return;
+  var figs = [].slice.call(grid.querySelectorAll('.ph'));
+  var bar = document.getElementById('pf-f');
+  [].slice.call(bar.querySelectorAll('[data-pf]')).forEach(function (b) {
+    var k = b.getAttribute('data-pf');
+    var n = k === 'all' ? figs.length : figs.filter(function (f) { return f.getAttribute('data-s') === k; }).length;
+    b.querySelector('i').textContent = n;
+    if (!n) b.hidden = true;
+  });
+  bar.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-pf]'); if (!b) return;
+    var k = b.getAttribute('data-pf');
+    [].slice.call(bar.querySelectorAll('[data-pf]')).forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    figs.forEach(function (f) { f.hidden = k !== 'all' && f.getAttribute('data-s') !== k; });    layout(true);
+  });
+  // Penataan masonry: setiap foto masuk ke kolom yang paling pendek, jadi tinggi kolom seimbang
+  var ncol = 0;
+  function cols() { var w = grid.clientWidth; return w >= 900 ? 3 : w >= 560 ? 2 : 1; }
+  function ratio(f) {
+    var im = f.querySelector('img');
+    var w = im.naturalWidth || +im.getAttribute('width') || 4, h = im.naturalHeight || +im.getAttribute('height') || 3;
+    return h / w;
+  }
+  function layout(force) {
+    var n = cols(); if (!force && n === ncol) return; ncol = n;
+    var cs = [], hs = [];
+    for (var i = 0; i < n; i++) { var c = document.createElement('div'); c.className = 'pf-col'; cs.push(c); hs.push(0); }
+    var vis = figs.filter(function (f) { return !f.hidden; });
+    if (vis.length <= 4 && n > 2) { n = 2; cs.length = 2; hs.length = 2; }
+    var r = vis.map(function (f) { return ratio(f) + 0.06; }), pick = [];
+    if (Math.pow(n, vis.length) <= 200000) {
+      // coba semua kombinasi (urutan foto tetap), pilih yang kolom tertingginya paling rendah
+      var best = Infinity, bestSpread = Infinity, a = new Array(vis.length).fill(0), t = new Array(n);
+      (function go(i) {
+        if (i === vis.length) {
+          for (var q = 0; q < n; q++) t[q] = 0;
+          for (var k = 0; k < i; k++) t[a[k]] += r[k];
+          var mx = Math.max.apply(null, t), mn = Math.min.apply(null, t);
+          if (mx < best - 1e-9 || (Math.abs(mx - best) < 1e-9 && mx - mn < bestSpread)) { best = mx; bestSpread = mx - mn; pick = a.slice(); }
+          return;
+        }
+        for (var c = 0; c < n; c++) { a[i] = c; go(i + 1); }
+      })(0);
+    } else {
+      vis.forEach(function (f, i) { var j = hs.indexOf(Math.min.apply(null, hs)); pick[i] = j; hs[j] += r[i]; });
+    }
+    vis.forEach(function (f, i) { cs[pick[i]].appendChild(f); });
+    figs.forEach(function (f) { if (f.hidden) cs[0].appendChild(f); });
+    grid.innerHTML = ''; cs.forEach(function (c) { grid.appendChild(c); });
+  }
+  layout(true);
+  var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { layout(false); }, 150); });
+  var lb = document.getElementById('lb'), im = document.getElementById('lb-img'), cur = 0, list = [], last = null;
+  function en() { var on = document.querySelector('.lang [aria-pressed="true"]'); return !!on && on.getAttribute('data-lang') === 'en'; }
+  function txt(f, sel) { var e = f.querySelector(sel); return e ? e.textContent : ''; }
+  function show(i) {
+    cur = (i + list.length) % list.length;
+    var f = list[cur], img = f.querySelector('img');
+    im.src = img.currentSrc || img.src; im.alt = img.alt;
+    document.getElementById('lb-k').textContent = txt(f, '.ph-k');
+    document.getElementById('lb-c').textContent = txt(f, '.ph-c');
+    document.getElementById('lb-d').textContent = txt(f, '.ph-d');
+    document.getElementById('lb-n').textContent = (cur + 1) + ' / ' + list.length;
+  }
+  function open(f) {
+    list = figs.filter(function (x) { return !x.hidden; });
+    last = document.activeElement;
+    var E = en();
+    lb.setAttribute('aria-label', E ? 'Project photo' : 'Foto proyek');
+    document.getElementById('lb-x').setAttribute('aria-label', E ? 'Close' : 'Tutup');
+    document.getElementById('lb-p').setAttribute('aria-label', E ? 'Previous photo' : 'Foto sebelumnya');
+    document.getElementById('lb-q').setAttribute('aria-label', E ? 'Next photo' : 'Foto berikutnya');
+    show(list.indexOf(f));
+    lb.hidden = false;
+    requestAnimationFrame(function () { lb.classList.add('on'); requestAnimationFrame(function () { document.getElementById('lb-x').focus(); }); });
+    document.documentElement.style.overflow = 'hidden';
+  }
+  function close() {
+    lb.classList.remove('on');
+    document.documentElement.style.overflow = '';
+    setTimeout(function () { lb.hidden = true; }, 250);
+    if (last && last.focus) last.focus();
+  }
+  figs.forEach(function (f) {
+    var b = f.querySelector('.ph-b'); if (!b) return;
+    b.setAttribute('tabindex', '0'); b.setAttribute('role', 'button');
+    b.addEventListener('click', function () { open(f); });
+    b.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(f); } });
+  });
+  document.getElementById('lb-x').addEventListener('click', close);
+  document.getElementById('lb-p').addEventListener('click', function () { show(cur - 1); });
+  document.getElementById('lb-q').addEventListener('click', function () { show(cur + 1); });
+  lb.addEventListener('click', function (e) { if (e.target === lb || e.target.classList.contains('lb-stage')) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') show(cur - 1);
+    else if (e.key === 'ArrowRight') show(cur + 1);
+    else if (e.key === 'Tab') {
+      var bs = [].slice.call(lb.querySelectorAll('button')), i = bs.indexOf(document.activeElement);
+      e.preventDefault(); bs[(i + (e.shiftKey ? bs.length - 1 : 1)) % bs.length].focus();
+    }
+  });
+  var sx = null;
+  lb.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', function (e) { if (sx === null) return; var dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1)); sx = null; });
+});
+</script>
+</body>
+</html>
