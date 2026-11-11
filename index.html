@@ -20,7 +20,7 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap"></noscript>
 <link rel="preload" as="image" href="images/background-mobile.webp" media="(max-width:900px)" fetchpriority="high">
 <link rel="preload" as="image" href="images/background.webp" media="(min-width:901px)" fetchpriority="high">
-<script src="script.js?v=wa24" defer></script>
+<script src="script.js?v=wa25" defer></script>
 <link rel="stylesheet" href="style.css?v=206">
 <style>
 /* Hero beranda: judul tetap putih (tanpa kuning). Lapisan navy pekat di kiri (tempat teks) dan memudar ke kanan agar foto tetap terlihat jernih */
@@ -83,11 +83,11 @@ body[data-page=beranda] .hero .hero-facts li::before{content:"";width:6px;height
 .pm .pm-no{display:grid;place-items:center;width:68px;height:68px;border-radius:50%;background:#fff;border:2px solid var(--pm-blue);font:800 1.1rem/1 Manrope,sans-serif;font-variant-numeric:tabular-nums;color:var(--pm-blue);transition:background .25s,color .25s,box-shadow .25s}
 .pm .pm-item:hover .pm-no{background:var(--pm-blue);color:#fff;box-shadow:0 10px 24px -10px rgba(29,79,216,.6)}
 .pm .pm-body{min-width:0;padding-top:8px}
-.pm .pm-item h3{margin:0 0 10px;font:800 1.3rem/1.35 Manrope,sans-serif;letter-spacing:-.01em;color:var(--pm-navy)}
-.pm .pm-item p{display:block;margin:0;max-width:52ch;font:400 1rem/1.75 Poppins,sans-serif;color:var(--pm-mute)}
+.pm .pm-item .pm-h{margin:0 0 10px;font:800 1.3rem/1.35 Manrope,sans-serif;letter-spacing:-.01em;color:var(--pm-navy)}
+.pm .pm-item p:not(.pm-h){display:block;margin:0;max-width:52ch;font:400 1rem/1.75 Poppins,sans-serif;color:var(--pm-mute)}
 
 @media (max-width:900px){.pm{padding:64px 0}.pm-in{grid-template-columns:minmax(0,1fr);gap:44px}.pm-side{position:static}}
-@media (max-width:520px){[data-page=beranda] .hero h1 .gold{display:inline}.pm .pm-item{grid-template-columns:48px minmax(0,1fr);gap:16px;padding-bottom:36px}.pm .pm-item::before{left:23px;top:48px}.pm .pm-no{width:48px;height:48px;font-size:.95rem}.pm .pm-body{padding-top:2px}.pm .pm-item h3{font-size:1.12rem;margin-bottom:6px}.pm .pm-item p{font-size:.94rem}}
+@media (max-width:520px){[data-page=beranda] .hero h1 .gold{display:inline}.pm .pm-item{grid-template-columns:48px minmax(0,1fr);gap:16px;padding-bottom:36px}.pm .pm-item::before{left:23px;top:48px}.pm .pm-no{width:48px;height:48px;font-size:.95rem}.pm .pm-body{padding-top:2px}.pm .pm-item .pm-h{font-size:1.12rem;margin-bottom:6px}.pm .pm-item p:not(.pm-h){font-size:.94rem}}
 
 /* Pilihan mobile file: dua kartu (Manual dan Mekanik) berdampingan, foto di atas, teks di bawah */
 .sec-lead .grid#types{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:none;margin:0;align-items:stretch}
@@ -131,9 +131,9 @@ body[data-page=beranda] #sect .card.static .pjp img{position:absolute;inset:0;wi
 body[data-page=beranda] #sect .card.static:hover .pjp img{transform:scale(1.05)}
 body[data-page=beranda] #sect .card.static::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(10,26,61,0) 35%,rgba(10,26,61,.55) 62%,rgba(10,26,61,.92) 100%)}
 body[data-page=beranda] #sect .card.static .pj .bd{position:absolute;left:0;right:0;bottom:0;z-index:2;display:block;margin:0;padding:0 34px 32px;background:none;border:0;border-radius:0;box-shadow:none}
-body[data-page=beranda] #sect .card.static .pj .bd h2{margin:0;font:600 clamp(1.12rem,1.35vw,1.35rem)/1.3 Manrope,sans-serif;letter-spacing:-.005em;color:#fff}
-body[data-page=beranda] #sect .card.static .pj .bd h2::before{content:"";display:block;width:28px;height:2px;border-radius:2px;background:#dcc27c;margin-bottom:12px;transition:width .35s ease}
-body[data-page=beranda] #sect .card.static:hover .pj .bd h2::before{width:48px}
+body[data-page=beranda] #sect .card.static .pj .bd .sc-h{margin:0;font:600 clamp(1.12rem,1.35vw,1.35rem)/1.3 Manrope,sans-serif;letter-spacing:-.005em;color:#fff}
+body[data-page=beranda] #sect .card.static .pj .bd .sc-h::before{content:"";display:block;width:28px;height:2px;border-radius:2px;background:#dcc27c;margin-bottom:12px;transition:width .35s ease}
+body[data-page=beranda] #sect .card.static:hover .pj .bd .sc-h::before{width:48px}
 body[data-page=beranda] #sect .card.static .pj .bd .ex{margin:8px 0 0;max-width:42ch;font:400 .88rem/1.65 Poppins,sans-serif;letter-spacing:.005em;color:rgba(255,255,255,.78)}
 
 @media(max-width:900px){
@@ -144,7 +144,7 @@ body[data-page=beranda] #sect .card.static .pj .bd .ex{margin:8px 0 0;max-width:
 @media(max-width:600px){
   body[data-page=beranda] #sect{grid-template-columns:minmax(0,1fr);grid-auto-rows:260px;gap:14px}
   body[data-page=beranda] #sect .card.static{border-radius:16px}
-  body[data-page=beranda] #sect .card.static .pj .bd h2{font-size:1.1rem}
+  body[data-page=beranda] #sect .card.static .pj .bd .sc-h{font-size:1.1rem}
   body[data-page=beranda] #sect .card.static .pj .bd .ex{font-size:.85rem}
 }
 @media(prefers-reduced-motion:reduce){body[data-page=beranda] #sect .card.static,body[data-page=beranda] #sect .card.static .pjp img{transition:none}body[data-page=beranda] #sect .card.static:hover,body[data-page=beranda] #sect .card.static:hover .pjp img{transform:none}}
@@ -157,14 +157,14 @@ html body[data-page=beranda] .sec-h h2,html body[data-page=beranda] .pm .pm-titl
 /* Paragraf pembuka bagian */
 html body[data-page=beranda] .sec-h p,html body[data-page=beranda] .pm .pm-lead,html body[data-page=beranda] .cta p{font:400 var(--fs-intro)/1.75 Poppins,sans-serif}
 /* Judul kartu / poin */
-html body[data-page=beranda] .pm .pm-item h3,html body[data-page=beranda] #sect .card.static .pj .bd h2,html body[data-page=beranda] .sec-lead #types .card .bd h2,html body[data-page=beranda] .sec-dark #adv h2,html body[data-page=beranda] #faq button{font-family:Manrope,sans-serif;font-weight:600;font-size:var(--fs-h3);line-height:1.35;letter-spacing:-.005em}
+html body[data-page=beranda] .pm .pm-item .pm-h,html body[data-page=beranda] #sect .card.static .pj .bd .sc-h,html body[data-page=beranda] .sec-lead #types .card .bd h2,html body[data-page=beranda] .sec-dark #adv h2,html body[data-page=beranda] #faq button{font-family:Manrope,sans-serif;font-weight:600;font-size:var(--fs-h3);line-height:1.35;letter-spacing:-.005em}
 html body[data-page=beranda] #faq button{font-size:1rem}
 /* Teks isi kartu / poin */
-html body[data-page=beranda] .pm .pm-item p,html body[data-page=beranda] .sec-lead #types .card .bd .ex,html body[data-page=beranda] .sec-dark #adv p,html body[data-page=beranda] #faq .ans p{font:400 var(--fs-body)/1.7 Poppins,sans-serif}
+html body[data-page=beranda] .pm .pm-item p:not(.pm-h),html body[data-page=beranda] .sec-lead #types .card .bd .ex,html body[data-page=beranda] .sec-dark #adv p,html body[data-page=beranda] #faq .ans p{font:400 var(--fs-body)/1.7 Poppins,sans-serif}
 html body[data-page=beranda] #sect .card.static .pj .bd .ex{font-size:.88rem}
 @media (max-width:520px){
-  html body[data-page=beranda] .pm .pm-item h3,html body[data-page=beranda] #sect .card.static .pj .bd h2,html body[data-page=beranda] .sec-lead #types .card .bd h2,html body[data-page=beranda] .sec-dark #adv h2{font-size:1.06rem}
-  html body[data-page=beranda] .pm .pm-item p,html body[data-page=beranda] .sec-lead #types .card .bd .ex,html body[data-page=beranda] .sec-dark #adv p,html body[data-page=beranda] #faq .ans p{font-size:.9rem}
+  html body[data-page=beranda] .pm .pm-item .pm-h,html body[data-page=beranda] #sect .card.static .pj .bd .sc-h,html body[data-page=beranda] .sec-lead #types .card .bd h2,html body[data-page=beranda] .sec-dark #adv h2{font-size:1.06rem}
+  html body[data-page=beranda] .pm .pm-item p:not(.pm-h),html body[data-page=beranda] .sec-lead #types .card .bd .ex,html body[data-page=beranda] .sec-dark #adv p,html body[data-page=beranda] #faq .ans p{font-size:.9rem}
 }
 </style>
 <style>
@@ -184,8 +184,8 @@ html body[data-page=beranda] .why-sec .why-card:nth-child(2) .why-ic{background-
 html body[data-page=beranda] .why-sec .why-card:nth-child(3) .why-ic{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z'/%3E%3Cpath d='M14 3v5h5'/%3E%3Cpath d='M9 14l2 2 4-4'/%3E%3C/svg%3E"),linear-gradient(140deg,#3d6fe0,#1d3f9e)}
 html body[data-page=beranda] .why-sec .why-card:nth-child(4) .why-ic{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 14v-2a8 8 0 0 1 16 0v2'/%3E%3Crect x='3' y='14' width='4' height='6' rx='1.5'/%3E%3Crect x='17' y='14' width='4' height='6' rx='1.5'/%3E%3Cpath d='M19 20c0 1.5-2 2-5 2h-3'/%3E%3C/svg%3E"),linear-gradient(140deg,#3d6fe0,#1d3f9e)}
 html body[data-page=beranda] .why-sec .why-no{font:600 .8rem/1 Manrope,sans-serif;letter-spacing:.14em;font-variant-numeric:tabular-nums;color:rgba(255,255,255,.38);padding-top:4px}
-html body[data-page=beranda] .why-sec .why-card h3{margin:0 0 10px;font:600 var(--fs-h3,1.2rem)/1.35 Manrope,sans-serif;letter-spacing:-.005em;color:#fff}
-html body[data-page=beranda] .why-sec .why-card p{margin:0;font:400 var(--fs-body,.92rem)/1.7 Poppins,sans-serif;color:rgba(227,236,255,.78)}
+html body[data-page=beranda] .why-sec .why-card .why-h{margin:0 0 10px;font:600 var(--fs-h3,1.2rem)/1.35 Manrope,sans-serif;letter-spacing:-.005em;color:#fff}
+html body[data-page=beranda] .why-sec .why-card p:not(.why-h){margin:0;font:400 var(--fs-body,.92rem)/1.7 Poppins,sans-serif;color:rgba(227,236,255,.78)}
 @media (max-width:1024px){html body[data-page=beranda] .why-sec .why{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){html body[data-page=beranda] .why-sec .why{grid-template-columns:minmax(0,1fr);gap:14px}html body[data-page=beranda] .why-sec .why-card{padding:22px 22px 24px}html body[data-page=beranda] .why-sec .why-top{margin-bottom:22px}html body[data-page=beranda] .why-sec .why-ic{width:46px;height:46px;border-radius:12px}}
 @media (prefers-reduced-motion:reduce){html body[data-page=beranda] .why-sec .why-card,html body[data-page=beranda] .why-sec .why-card::before{transition:none}html body[data-page=beranda] .why-sec .why-card:hover{transform:none}}
