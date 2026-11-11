@@ -101,6 +101,7 @@ a.kc-pcard:hover{border-color:var(--kc-blue);box-shadow:0 22px 44px -30px rgba(1
   .kc-side{position:static}
 }
 @media (max-width:600px){.kc-list,.kc-list.three{grid-template-columns:1fr}}
+.kc-date{display:block;margin:6px 0 2px;font:500 .78rem/1.3 Poppins,sans-serif;color:#8a93a3}
 </style>
 </head>
 <body data-page="artikel">
@@ -159,33 +160,41 @@ a.kc-pcard:hover{border-color:var(--kc-blue);box-shadow:0 22px 44px -30px rgba(1
   <div class="dl" id="dlg-body"></div>
 </dialog>
 
-<script src="script.js?v=wa25"></script>
+<script src="script.js?v=wa26"></script>
 <script>
 /* Isi kartu dari data di script.js (PROJECTS, SECTORS, ARTICLES) dan ikut tombol bahasa ID/EN */
 (function(){
   function pimg(foto, pos, letter, alt){
     return '<div class="kc-pimg"><span aria-hidden="true">'+esc(letter)+'</span>'+
-      (foto ? '<img src="'+esc(encodeURI(foto))+'" alt="'+esc(alt)+'" loading="lazy" style="object-position:'+esc(pos||'50% 50%')+'" onerror="this.remove()">' : '')+'</div>';
+      (foto ? '<img src="'+esc(foto)+'" alt="'+esc(alt)+'" loading="lazy" style="object-position:'+esc(pos||'50% 50%')+'" onerror="this.remove()">' : '')+'</div>';
   }
   function cur(){ var on=document.querySelector('.lang [aria-pressed="true"]'); return on?on.getAttribute('data-lang'):'id'; }
   function texts(lang){
     document.querySelectorAll('[data-id][data-en]').forEach(function(el){ el.textContent = el.getAttribute(lang==='en'?'data-en':'data-id'); });
   }
   
+  var ART_WP = null;
   function draw(){
     var S = STR[LANG];
-    var rd = esc(S.read.replace(/\s*\u2192\s*$/, '')) + ' \u2192';
-    function link(a, cls, inner){ return '<a class="'+cls+'" href="'+artikelUrl(a.id)+'" data-open="artikel:'+a.id+'">'+inner+'</a>'; }
-    function pic(a){ return pimg(ART_PIC[a.id],'50% 50%',L(a,'kat').charAt(0),L(a,'judul')); }
-    var f = ARTICLES[0];
+    var rd = esc(S.read.replace(/\s*→\s*$/, '')) + ' →';
+    var list = (ART_WP && ART_WP.length) ? ART_WP : localArts();
+    if (!list.length) return;
+    function link(o, cls, inner){
+      var x = artExt(o.url);
+      return '<a class="'+cls+'" href="'+esc(o.url)+'"'+(x ? ' target="_blank" rel="noopener"' : (o.id ? ' data-open="artikel:'+esc(o.id)+'"' : ''))+'>'+inner+'</a>';
+    }
+    function pic(o){ return pimg(artImg(o.img), '50% 50%', (o.kat || o.judul || ' ').charAt(0), o.judul); }
+    function tgl(o){ var t = artTgl(o.tgl); return t ? '<time class="kc-date" datetime="'+esc(String(o.tgl).slice(0,10))+'">'+esc(t)+'</time>' : ''; }
+    var f = list[0];
     var feat = link(f, 'kc-feat', pic(f) +
-      '<div class="kc-fbd"><span class="kc-tag">'+esc(L(f,'kat'))+'</span><h2>'+esc(L(f,'judul'))+'</h2>'+
-      '<p>'+esc(L(f,'ex'))+'</p><span class="kc-read">'+rd+'</span></div>');
-    var rows = ARTICLES.slice(1).map(function(a){
-      return link(a, 'kc-row', pic(a) + '<div><span class="kc-tag">'+esc(L(a,'kat'))+'</span><h3>'+esc(L(a,'judul'))+'</h3></div>');
+      '<div class="kc-fbd"><span class="kc-tag">'+esc(f.kat || '')+'</span>'+tgl(f)+'<h2>'+esc(f.judul)+'</h2>'+
+      '<p>'+esc(artCut(f.ex, 220))+'</p><span class="kc-read">'+rd+'</span></div>');
+    var rows = list.slice(1).map(function(o){
+      return link(o, 'kc-row', pic(o) + '<div><span class="kc-tag">'+esc(o.kat || '')+'</span>'+tgl(o)+'<h3>'+esc(o.judul)+'</h3></div>');
     }).join('');
     document.getElementById('kc-art').innerHTML = feat + '<div class="kc-rows">' + rows + '</div>';
   }
+  wpPosts(+CFG.wpHalaman || 12, function(l){ ART_WP = l; draw(); });
 
   function all(){ var l=cur(); texts(l); if (typeof draw==='function') draw(); }
   document.querySelectorAll('.lang button').forEach(function(b){
