@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Halaman tidak ditemukan | Cahaya Mustika Internesia</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0f2350">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{display:flex;align-items:center;justify-content:center;padding:24px;background:linear-gradient(140deg,#13244f,#1b3470 60%,#22408a);color:#fff;font-family:Poppins,Manrope,system-ui,-apple-system,"Segoe UI",sans-serif}
+.box{max-width:520px;text-align:center}
+.code{margin:0;font:800 clamp(4.5rem,16vw,7rem)/1 Manrope,system-ui,sans-serif;letter-spacing:-.04em;color:#dcc27c}
+h1{margin:12px 0 0;font:700 clamp(1.4rem,4vw,1.9rem)/1.25 Manrope,system-ui,sans-serif}
+p{margin:12px auto 0;max-width:42ch;font-size:1rem;line-height:1.7;color:rgba(227,236,255,.8)}
+.act{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}
+.act a{display:inline-flex;align-items:center;padding:14px 26px;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none}
+.p{background:#fff;color:#13244f}
+.s{border:1px solid rgba(255,255,255,.4);color:#fff}
+.act a:focus-visible{outline:3px solid #dcc27c;outline-offset:3px}
+</style>
+</head>
+<body>
+<main class="box">
+  <p class="code" aria-hidden="true">404</p>
+  <h1>Halaman tidak ditemukan</h1>
+  <p>Halaman yang Anda cari mungkin sudah dipindah atau alamatnya salah ketik. Silakan kembali ke beranda atau lihat produk kami.</p>
+  <div class="act">
+    <a class="p" href="/" data-p="">Kembali ke Beranda</a>
+    <a class="s" href="/produk.html" data-p="produk.html">Lihat Produk</a>
+    <a class="s" href="https://wa.me/628113301819?text=MFJ-MYID%0A%0AHalo%20Cahaya%20Mustika%20Internesia%2C%20saya%20tertarik%20dengan%20produk%20Mobile%20File." target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</main>
+<script>
+/* Di GitHub Pages situs berada di subfolder, jadi tautan disesuaikan otomatis */
+(function () {
+  var base = /\.github\.io$/.test(location.hostname) ? '/' + (location.pathname.split('/')[1] || '') + '/' : '/';
+  [].slice.call(document.querySelectorAll('a[data-p]')).forEach(function (a) { a.href = base + a.getAttribute('data-p'); });
+})();
+</script>
+</body>
+</html>

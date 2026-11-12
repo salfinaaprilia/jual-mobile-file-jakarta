@@ -30,3 +30,6 @@
     Header set Cache-Control "no-cache"
   </FilesMatch>
 </IfModule>
+
+# Halaman 404 khusus
+ErrorDocument 404 /404.html
